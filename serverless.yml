@@ -13,12 +13,18 @@ provider:
         - arn:aws:dynamodb:us-east-2:791569384740:table/TaskTable
 
 functions:
-  api:
-    handler: index.handler
+  hello:
+    handler: src/index.hello
     events:
       - httpApi:
           path: /
           method: get
+  createTask:
+    handler: src/addTask.addTask
+    events:
+      - httpApi:
+          path: /tasks
+          method: post
 
 resources:
   Resources:
