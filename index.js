@@ -2,7 +2,7 @@ module.exports.handler = async(event) => {
     return {
         statusCode: 200,
         body: JSON.stringify({
-                message: "Hello World! 1",
+                message: "Hello World!",
                 input: event,
             },
             null,
